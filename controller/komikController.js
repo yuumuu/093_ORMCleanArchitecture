@@ -64,5 +64,8 @@ async function deleteKomik(req, res) {
         }
         await komik.destroy();
         res.status(200).json({ message: 'Komik deleted successfully.' });
-    } catch (err) {}
+    } catch (err) {
+        console.error('Error deleting komik: ', err.message);
+        res.status(500).json({ error: 'An error occurred while deleting komik.' });
+    }
 }
