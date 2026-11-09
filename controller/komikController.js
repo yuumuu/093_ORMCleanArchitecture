@@ -23,3 +23,12 @@ async function getKomikById(req, res) {
         res.status(500).json({ error: 'An error occurred while retrieving komik.' });
     }
 }
+
+async function createKomik(req, res) {
+    const { title, description, author } = req.body;
+    try {
+    } catch (err) {
+        console.error('Error creating komik: ', err.message);
+        res.status(500).json({ error: 'An error occurred while creating komik.' });
+    }
+}
