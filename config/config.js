@@ -6,7 +6,7 @@ const development = {
   database: process.env.DB_NAME,
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
-  dialect: DB_DIALECT,
+  dialect: process.env.DB_DIALECT,
 }
 
 const production = {
